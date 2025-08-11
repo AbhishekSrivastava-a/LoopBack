@@ -1,0 +1,12 @@
+{
+  "ids": {
+    "Product": 4
+  },
+  "models": {
+    "Product": {
+      "1": "{\"title\":\"Learn Backend\",\"qty\":1,\"price\":1000,\"id\":1}",
+      "2": "{\"title\":\"Learn Backend\",\"qty\":1,\"price\":1000,\"id\":2}",
+      "3": "{\"title\":\"Learn frontend\",\"qty\":1,\"price\":4000,\"id\":3}"
+    }
+  }
+}
