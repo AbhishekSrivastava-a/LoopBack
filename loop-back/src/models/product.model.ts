@@ -1,13 +1,13 @@
 import {Entity, model, property} from '@loopback/repository';
 
-@model()
+@model({settings: {}})
 export class Product extends Entity {
   @property({
     type: 'number',
     id: true,
-    generated: true,
+    required: true,
   })
-  id?: number;
+  id: number;
 
   @property({
     type: 'string',
@@ -21,12 +21,10 @@ export class Product extends Entity {
   })
   qty: number;
 
-  
   @property({
     type: 'number',
-    required: false,
   })
-  price: number;
+  price?: number;
 
 
   constructor(data?: Partial<Product>) {
