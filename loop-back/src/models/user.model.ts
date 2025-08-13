@@ -5,6 +5,7 @@ export class User extends Entity {
   @property({
     type: 'number',
     id: true,
+    generated: true,
   })
   id?: number;
 
@@ -32,6 +33,14 @@ export class User extends Entity {
   })
   lastName: string;
 
+  // ✅ Added permissions field so AdminController compiles
+  @property({
+    type: 'array',
+    itemType: 'string',
+    required: false,
+    default: [],
+  })
+  permissions?: string[];
 
   constructor(data?: Partial<User>) {
     super(data);
@@ -39,7 +48,6 @@ export class User extends Entity {
 }
 
 export interface UserRelations {
-  // describe navigational properties here
 }
 
 export type UserWithRelations = User & UserRelations;
